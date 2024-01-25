@@ -7,7 +7,7 @@ import { Layout } from "../../shared/ui/layout";
 const RenderRoutes: React.FC = () => {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path="/post-test/" element={<Layout />}>
         <Route index element={<MainPage />} />
         <Route path="post/:id" element={<PostPage />} />
       </Route>
