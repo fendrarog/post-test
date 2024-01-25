@@ -59,7 +59,8 @@ const MainPage: React.FC = () => {
               ellipsis={
                 (
                   <>
-                    <span>...</span> <Link to={`/post/${id}`}>просмотр</Link>
+                    <span>...</span>{" "}
+                    <Link to={`/post-test/post/${id}`}>просмотр</Link>
                   </>
                 ) as any
               }
