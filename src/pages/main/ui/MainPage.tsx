@@ -57,9 +57,11 @@ const MainPage: React.FC = () => {
               text={`${id}. ${title}. ${body}`}
               maxLine="1"
               ellipsis={
-                <>
-                  <span>...</span> <Link to={`/post/${id}`}>просмотр</Link>
-                </>
+                (
+                  <>
+                    <span>...</span> <Link to={`/post/${id}`}>просмотр</Link>
+                  </>
+                ) as any
               }
               trimRight
               basedOn="letters"

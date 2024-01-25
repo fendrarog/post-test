@@ -7,17 +7,17 @@ const PostPage: React.FC = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const { data, isLoading, isFetching } = useGetPostOneQuery(+id!);
+  const { data, isLoading, isFetching, isSuccess } = useGetPostOneQuery(+id!);
 
   if (isLoading || isFetching) return <div>Загрузка...</div>;
 
-
-  return (
-    <>
-      <PostExpanded {...data} />
-      <button onClick={() => navigate(-1)}>Назад</button>
-    </>
-  );
+  if (isSuccess)
+    return (
+      <>
+        <PostExpanded {...data} />
+        <button onClick={() => navigate(-1)}>Назад</button>
+      </>
+    );
 };
 
 export default PostPage;
